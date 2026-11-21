@@ -1,0 +1,108 @@
+# ============================================================
+#  EDIT THIS FILE to change everything on your home page.
+# ============================================================
+name: "MD Irfanul Hoque Taseen"
+initials: "IT"
+greeting: "Hi, I'm"
+title: "CSE Student · Aspiring Software Engineer"
+location: "Dhaka, Bangladesh"
+photo: "/images/WhatsApp_Image_2026-11-09_at_17.36.03.jpeg"
+resume: ""           # e.g. "/files/cv.pdf" (file goes in static/files/)
+
+now:
+  - label: "Studying"
+    value: "BSc in CSE, Daffodil International University"
+  - label: "Learning"
+    value: "C++, data structures & algorithms"
+  - label: "Practising"
+    value: "Competitive programming on Codeforces"
+
+about: |
+  I'm a Computer Science & Engineering student at **Daffodil International University**,
+  based in Dhaka. I enjoy turning ideas into working software, from campus tools to
+  AI-assisted systems, and I learn best by building real projects.
+
+  My goal is to build a robust career in the tech industry by rigorously mastering
+  computer science, software programming and robotics engineering.
+
+interests: ["Software Engineering", "Artificial Intelligence", "Competitive Programming", "Robotics Engineering", "Computer Science"]
+
+education:
+  - degree: "BSc in Computer Science & Engineering"
+    school: "Daffodil International University"
+    period: "May 2025 – Present"
+    result: "Currently studying"
+  - degree: "Higher Secondary Certificate (HSC)"
+    school: "BPATC School and College"
+    period: "2023"
+    result: "GPA 4.83 / 5.00"
+  - degree: "Secondary School Certificate (SSC)"
+    school: "BPATC School and College"
+    period: "2021"
+    result: "GPA 5.00 / 5.00"
+
+skills_note: "An honest snapshot. I'm comfortable with these and still learning every day."
+skills:
+  - group: "Programming languages"
+    items: ["C", "C++", "Python"]
+  - group: "Web"
+    items: ["HTML", "CSS", "JavaScript"]
+  - group: "Tools"
+    items: ["Git", "GitHub", "Hugo"]
+
+projects:
+  - name: "OptiNode AI"
+    subtitle: "GPU Cluster Optimization"
+    description: "A hackathon project that visualises and optimises how workloads are spread across GPU/server nodes in a cluster, aiming for better utilisation and lower energy use."
+    tags: ["AI", "Hackathon", "Optimization"]
+    link: "https://github.com/irfanulhoquetaseen/OptiNode-Ai-Cluster-Hackathon"
+  - name: "Lockeroo"
+    subtitle: "Cloud Storage & File Sharing"
+    description: "A cloud storage and file sharing platform for uploading files, keeping them organised and sharing them with others through links."
+    tags: ["Cloud", "Web", "File sharing"]
+    link: "https://github.com/irfanulhoquetaseen/Lockeroo"
+  - name: "DIU Campus Navigator"
+    subtitle: "Campus map & routes"
+    description: "A web app that helps students and visitors find buildings and rooms at Daffodil International University and see the route to get there."
+    tags: ["HTML", "CSS", "JavaScript"]
+    link: "https://github.com/irfanulhoquetaseen/DIU-Campus-Navigator"
+  - name: "GRABit"
+    subtitle: "Media Downloader"
+    description: "A media downloader that lets users paste a link, preview the media and choose a format to save it in."
+    tags: ["Python", "Tool"]
+    link: "https://github.com/irfanulhoquetaseen/GRABit"
+  - name: "Craft My Script"
+    subtitle: "Presentation Speech Maker"
+    description: "Turns presentation slides or documents into a ready-to-deliver speech script, with a text-to-speech preview to rehearse it."
+    tags: ["AI", "Productivity"]
+    link: "https://github.com/irfanulhoquetaseen/Craft-My-Script"
+
+career:
+  summary: |
+    **Main goal:** to build a robust career in the tech industry by rigorously mastering
+    computer science, software programming and robotics engineering. This is the path I'm following:
+  steps:
+    - when: "Now · CSE Student"
+      what: "Strengthen fundamentals in C, C++ and Python, data structures and algorithms, and practise competitive programming."
+    - when: "Software Engineer"
+      what: "Build and ship reliable software, learn engineering practices and work on real products."
+    - when: "AI Engineer"
+      what: "Go deeper into machine learning and AI systems and apply them to real problems."
+    - when: "AI Software Engineer"
+      what: "Combine strong software engineering with AI to build intelligent, production-ready systems."
+
+contact:
+  message: "Whether it's a project, a study group or just a chat about tech, I'm happy to connect."
+  email: "irfanul.tae@gmail.com"
+  phone: "01826380359"
+  links:
+    - name: "GitHub"
+      url: "https://github.com/irfanulhoquetaseen"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/md-irfanul-hoque-taseen-05163a427/"
+    - name: "Codeforces"
+      url: "https://codeforces.com/profile/TaseenXNeo"
+    - name: "Facebook"
+      url: "https://www.facebook.com/irfanul.hoque.taseen"
+    - name: "Instagram"
+      url: "https://www.instagram.com/irfanul_taseen/"
