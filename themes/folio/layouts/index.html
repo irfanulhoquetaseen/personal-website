@@ -69,11 +69,17 @@
   <div class="projects-grid">
     {{ range $p.projects }}
     <article class="card project reveal">
-      <h3>{{ .name }}</h3>
-      {{ with .subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
-      <p>{{ .description }}</p>
-      <ul class="tags">{{ range .tags }}<li>{{ . }}</li>{{ end }}</ul>
-      {{ with .link }}<a class="more" href="{{ . }}" target="_blank" rel="noopener">View project →</a>{{ end }}
+      {{ with .demo }}<div class="demo"><div class="demo-stage">{{ partial "demo.html" . }}</div></div>{{ end }}
+      <div class="project-body">
+        <h3>{{ .name }}</h3>
+        {{ with .subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+        <p>{{ .description }}</p>
+        <ul class="tags">{{ range .tags }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="project-links">
+          {{ with .live }}<a class="btn btn-primary btn-sm" href="{{ . }}" target="_blank" rel="noopener">Live site ↗</a>{{ end }}
+          {{ with .link }}<a class="btn btn-sm" href="{{ . }}" target="_blank" rel="noopener">Code on GitHub</a>{{ end }}
+        </div>
+      </div>
     </article>
     {{ end }}
   </div>
@@ -104,7 +110,6 @@
   <p class="lead">{{ $c.message }}</p>
   <div class="actions center">
     {{ with $c.email }}<a class="btn btn-primary" href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-    {{ with $c.phone }}<a class="btn" href="tel:{{ . }}">{{ . }}</a>{{ end }}
   </div>
   <div class="actions center">
     {{ range $c.links }}<a class="btn btn-ghost" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
