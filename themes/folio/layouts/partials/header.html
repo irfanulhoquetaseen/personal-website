@@ -1,0 +1,8 @@
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="{{ "/" | relURL }}">{{ site.Data.profile.name }}</a>
+    <nav class="nav-links">
+      {{ range site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+    </nav>
+  </div>
+</header>

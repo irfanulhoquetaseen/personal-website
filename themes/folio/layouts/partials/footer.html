@@ -1,0 +1,10 @@
+{{ $c := site.Data.profile.contact }}
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© {{ now.Year }} {{ site.Data.profile.name }} · Built with <a href="https://gohugo.io">Hugo</a></p>
+    <p class="footer-links">
+      {{ with $c.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ range first 3 $c.links }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+    </p>
+  </div>
+</footer>
