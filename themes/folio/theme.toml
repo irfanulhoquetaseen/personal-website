@@ -1,0 +1,4 @@
+name = "folio"
+license = "MIT"
+description = "A clean, light, minimal personal website theme."
+min_version = "0.120.0"
