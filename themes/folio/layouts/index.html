@@ -1,0 +1,113 @@
+{{ define "main" }}
+{{ $p := site.Data.profile }}
+<section class="hero wrap">
+  <div class="hero-text reveal">
+    <p class="eyebrow">{{ $p.greeting }}</p>
+    <h1>{{ $p.name }}</h1>
+    <p class="lead">{{ $p.title }}</p>
+    {{ with $p.location }}<p class="muted loc">📍 {{ . }}</p>{{ end }}
+    <div class="actions">
+      <a class="btn btn-primary" href="#projects">See my work</a>
+      <a class="btn" href="{{ "/posts/" | relURL }}">Read the blog</a>
+      {{ with $p.resume }}<a class="btn" href="{{ . | relURL }}" download>Download CV</a>{{ end }}
+    </div>
+  </div>
+  {{ with $p.now }}
+  <aside class="card now reveal">
+    <p class="now-head"><span class="dot"></span>Currently</p>
+    <dl>{{ range . }}<dt>{{ .label }}</dt><dd>{{ .value }}</dd>{{ end }}</dl>
+  </aside>
+  {{ end }}
+</section>
+
+<section id="about" class="section wrap">
+  <h2 class="section-title"><span>01</span>About me</h2>
+  <div class="about-grid reveal">
+    <div class="about-photo">
+      {{ with $p.photo }}<img src="{{ . | relURL }}" alt="Photo of {{ $p.name }}" width="260" height="260">
+      {{ else }}<div class="monogram" aria-hidden="true">{{ $p.initials }}</div>{{ end }}
+    </div>
+    <div>
+      <div class="prose">{{ $p.about | markdownify }}</div>
+      {{ with $p.interests }}<h3 class="sub">Interests</h3>
+      <ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section wrap">
+  <h2 class="section-title"><span>02</span>Education</h2>
+  <ol class="timeline">
+    {{ range $p.education }}
+    <li class="reveal">
+      <div class="t-period">{{ .period }}</div>
+      <div class="t-body">
+        <h3>{{ .degree }}</h3>
+        <p class="muted">{{ .school }}</p>
+        {{ with .result }}<p class="badge">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+</section>
+
+<section id="skills" class="section wrap">
+  <h2 class="section-title"><span>03</span>Skills</h2>
+  {{ with $p.skills_note }}<p class="muted note">{{ . }}</p>{{ end }}
+  <div class="skills-grid">
+    {{ range $p.skills }}
+    <div class="card reveal">
+      <h3>{{ .group }}</h3>
+      <ul class="chips">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="projects" class="section wrap">
+  <h2 class="section-title"><span>04</span>Projects</h2>
+  <div class="projects-grid">
+    {{ range $p.projects }}
+    <article class="card project reveal">
+      <h3>{{ .name }}</h3>
+      {{ with .subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+      <p>{{ .description }}</p>
+      <ul class="tags">{{ range .tags }}<li>{{ . }}</li>{{ end }}</ul>
+      {{ with .link }}<a class="more" href="{{ . }}" target="_blank" rel="noopener">View project →</a>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section id="career" class="section wrap">
+  <h2 class="section-title"><span>05</span>Career plan</h2>
+  <div class="prose reveal">{{ $p.career.summary | markdownify }}</div>
+  <ol class="steps">
+    {{ range $i, $s := $p.career.steps }}
+    <li class="reveal"><span class="step-n">{{ add $i 1 }}</span><div><strong>{{ $s.when }}</strong><p>{{ $s.what }}</p></div></li>
+    {{ end }}
+  </ol>
+</section>
+
+{{ $posts := first 3 (where site.RegularPages "Section" "posts") }}
+{{ if $posts }}
+<section id="blog" class="section wrap">
+  <h2 class="section-title"><span>06</span>Latest writing</h2>
+  <div class="post-list">{{ range $posts }}{{ partial "post-item.html" . }}{{ end }}</div>
+  <a class="more" href="{{ "/posts/" | relURL }}">All posts →</a>
+</section>
+{{ end }}
+
+{{ $c := $p.contact }}
+<section id="contact" class="section wrap contact reveal">
+  <h2>Let's talk</h2>
+  <p class="lead">{{ $c.message }}</p>
+  <div class="actions center">
+    {{ with $c.email }}<a class="btn btn-primary" href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+    {{ with $c.phone }}<a class="btn" href="tel:{{ . }}">{{ . }}</a>{{ end }}
+  </div>
+  <div class="actions center">
+    {{ range $c.links }}<a class="btn btn-ghost" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+  </div>
+</section>
+{{ end }}
