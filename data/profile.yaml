@@ -52,26 +52,33 @@ skills:
 
 projects:
   - name: "OptiNode AI"
+    demo: "optinode"
     subtitle: "GPU Cluster Optimization"
     description: "A hackathon project that visualises and optimises how workloads are spread across GPU/server nodes in a cluster, aiming for better utilisation and lower energy use."
     tags: ["AI", "Hackathon", "Optimization"]
     link: "https://github.com/irfanulhoquetaseen/OptiNode-Ai-Cluster-Hackathon"
   - name: "Lockeroo"
+    demo: "lockeroo"
+    live: "https://lockeroo-cloud.vercel.app/"
     subtitle: "Cloud Storage & File Sharing"
     description: "A cloud storage and file sharing platform for uploading files, keeping them organised and sharing them with others through links."
     tags: ["Cloud", "Web", "File sharing"]
     link: "https://github.com/irfanulhoquetaseen/Lockeroo"
   - name: "DIU Campus Navigator"
+    demo: "campus"
     subtitle: "Campus map & routes"
     description: "A web app that helps students and visitors find buildings and rooms at Daffodil International University and see the route to get there."
     tags: ["HTML", "CSS", "JavaScript"]
     link: "https://github.com/irfanulhoquetaseen/DIU-Campus-Navigator"
   - name: "GRABit"
+    demo: "grabit"
     subtitle: "Media Downloader"
     description: "A media downloader that lets users paste a link, preview the media and choose a format to save it in."
     tags: ["Python", "Tool"]
     link: "https://github.com/irfanulhoquetaseen/GRABit"
   - name: "Craft My Script"
+    demo: "script"
+    live: "https://craftmyscript.site/"
     subtitle: "Presentation Speech Maker"
     description: "Turns presentation slides or documents into a ready-to-deliver speech script, with a text-to-speech preview to rehearse it."
     tags: ["AI", "Productivity"]
@@ -94,7 +101,6 @@ career:
 contact:
   message: "Whether it's a project, a study group or just a chat about tech, I'm happy to connect."
   email: "irfanul.tae@gmail.com"
-  phone: "01826380359"
   links:
     - name: "GitHub"
       url: "https://github.com/irfanulhoquetaseen"
@@ -102,7 +108,3 @@ contact:
       url: "https://www.linkedin.com/in/md-irfanul-hoque-taseen-05163a427/"
     - name: "Codeforces"
       url: "https://codeforces.com/profile/TaseenXNeo"
-    - name: "Facebook"
-      url: "https://www.facebook.com/irfanul.hoque.taseen"
-    - name: "Instagram"
-      url: "https://www.instagram.com/irfanul_taseen/"
