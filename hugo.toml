@@ -1,0 +1,47 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "MD Irfanul Hoque Taseen"
+theme = "folio"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 6
+
+[params]
+  description = "Personal website and blog of MD Irfanul Hoque Taseen, CSE student at Daffodil International University and aspiring software engineer."
+  author = "MD Irfanul Hoque Taseen"
+
+[menus]
+  [[menus.main]]
+    name = "About"
+    url = "/#about"
+    weight = 1
+  [[menus.main]]
+    name = "Education"
+    url = "/#education"
+    weight = 2
+  [[menus.main]]
+    name = "Skills"
+    url = "/#skills"
+    weight = 3
+  [[menus.main]]
+    name = "Projects"
+    url = "/#projects"
+    weight = 4
+  [[menus.main]]
+    name = "Career"
+    url = "/#career"
+    weight = 5
+  [[menus.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 6
+  [[menus.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 7
+
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  style = "github"
